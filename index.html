@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Khitanan Muhamad Fathan Alfarizy</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+.svg-corner{
+
+position:absolute;
+
+width:220px;
+height:220px;
+
+opacity:.7;
+
+filter:
+drop-shadow(0 0 20px #d4af37);
+
+z-index:2;
+
+}
+
+.top-left{
+top:0;
+left:0;
+}
+
+.top-right{
+top:0;
+right:0;
+transform:scaleX(-1);
+}
+
+.bottom-left{
+bottom:0;
+left:0;
+transform:scaleY(-1);
+}
+
+.bottom-right{
+bottom:0;
+right:0;
+transform:scale(-1);
+}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#030712;
+font-family:Poppins,sans-serif;
+overflow-x:hidden;
+color:white;
+position:relative;
+}
+
+/* BACKGROUND */
+
+body::before{
+content:'';
+position:fixed;
+inset:0;
+
+background:
+radial-gradient(circle at top,#14254d 0%,#030712 60%);
+
+z-index:-3;
+}
+
+/* BINTANG EMAS */
+
+.stars{
+position:fixed;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:-2;
+}
+
+.star{
+position:absolute;
+background:#d4af37;
+border-radius:50%;
+animation:twinkle 3s infinite;
+}
+.gold-btn,
+.count-box,
+.event-item,
+.location-card,
+.closing-card{
+
+position:relative;
+overflow:hidden;
+
+}
+
+.gold-btn::before,
+.count-box::before,
+.event-item::before{
+
+content:'';
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.25),
+transparent
+);
+
+animation:shine 4s infinite;
+}
+.title,
+.child-name{
+
+animation:goldGlow 3s infinite alternate;
+
+}
+.luxury-footer{
+
+padding:120px 20px;
+
+text-align:center;
+
+background:
+linear-gradient(
+180deg,
+transparent,
+rgba(0,0,0,.5)
+);
+
+}
+
+.luxury-footer h2{
+
+font-size:55px;
+
+font-family:Cinzel;
+
+color:#d4af37;
+
+}
+
+.footer-line{
+
+width:200px;
+height:2px;
+
+background:#d4af37;
+
+margin:25px auto;
+
+}
+.lantern{
+
+position:absolute;
+
+width:140px;
+
+filter:
+drop-shadow(0 0 20px #d4af37);
+
+animation:
+lanternSwing 6s ease-in-out infinite;
+
+}
+
+@keyframes lanternSwing{
+
+0%{
+transform:rotate(-5deg);
+}
+
+50%{
+transform:rotate(5deg);
+}
+
+100%{
+transform:rotate(-5deg);
+}
+
+}
+.fog{
+
+position:fixed;
+width:100%;
+height:100%;
+
+background:
+radial-gradient(
+circle,
+rgba(212,175,55,.05),
+transparent 70%
+);
+
+pointer-events:none;
+
+animation:fogMove 15s infinite alternate;
+
+z-index:-1;
+}
+
+@keyframes fogMove{
+
+from{
+transform:translateX(-100px);
+}
+
+to{
+transform:translateX(100px);
+}
+
+}
+@keyframes goldGlow{
+
+from{
+text-shadow:
+0 0 10px #d4af37;
+}
+
+to{
+text-shadow:
+0 0 15px #d4af37,
+0 0 40px #d4af37,
+0 0 70px #d4af37;
+}
+
+}
+
+@keyframes shine{
+
+100%{
+left:200%;
+}
+
+}
+@keyframes twinkle{
+0%,100%{
+opacity:.2;
+transform:scale(1);
+}
+50%{
+opacity:1;
+transform:scale(1.8);
+}
+}
+
+/* ORNAMEN SUDUT */
+
+.corner{
+position:absolute;
+width:250px;
+opacity:.7;
+z-index:1;
+}
+
+.corner.top-left{
+top:0;
+left:0;
+}
+
+.corner.top-right{
+top:0;
+right:0;
+transform:scaleX(-1);
+}
+
+.corner.bottom-left{
+bottom:0;
+left:0;
+transform:scaleY(-1);
+}
+
+.corner.bottom-right{
+bottom:0;
+right:0;
+transform:scale(-1);
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+position:relative;
+}
+
+.container{
+max-width:1200px;
+width:100%;
+position:relative;
+z-index:10;
+}
+
+/* ARABIC */
+
+.arab{
+font-size:60px;
+color:#d4af37;
+margin-bottom:20px;
+text-shadow:
+0 0 10px #d4af37,
+0 0 25px #d4af37;
+}
+
+/* SUBTITLE */
+
+.subtitle{
+font-size:24px;
+letter-spacing:8px;
+color:#ffffff;
+margin-bottom:15px;
+}
+
+/* TITLE */
+
+.title{
+font-family:Cinzel,serif;
+font-size:100px;
+font-weight:700;
+
+background:linear-gradient(
+180deg,
+#fff5c2,
+#d4af37,
+#8d6a16
+);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+text-shadow:
+0 0 15px rgba(212,175,55,.8);
+}
+
+.line{
+width:350px;
+height:2px;
+background:#d4af37;
+margin:25px auto;
+}
+
+/* FOTO KUBAH */
+
+.photo-frame{
+width:380px;
+height:520px;
+
+margin:40px auto;
+
+background:#111;
+
+border:8px solid #d4af37;
+
+border-radius:
+220px 220px 20px 20px;
+
+overflow:hidden;
+
+position:relative;
+
+box-shadow:
+0 0 20px #d4af37,
+0 0 60px rgba(212,175,55,.5);
+}
+
+.photo-frame::before{
+content:'';
+position:absolute;
+inset:0;
+
+border:3px solid rgba(255,255,255,.15);
+
+border-radius:
+220px 220px 20px 20px;
+}
+
+.photo-frame img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* NAMA */
+
+.child-name{
+font-size:55px;
+font-weight:700;
+margin-top:25px;
+color:#fff;
+}
+
+.parents{
+font-size:24px;
+margin-top:10px;
+color:#d4af37;
+}
+
+.quote{
+max-width:700px;
+margin:30px auto;
+
+line-height:1.8;
+font-size:18px;
+}
+
+/* BUTTON */
+
+.gold-btn{
+
+display:inline-block;
+
+padding:18px 40px;
+
+background:linear-gradient(
+180deg,
+#f8e49b,
+#d4af37,
+#9d761a
+);
+
+color:black;
+
+font-weight:700;
+
+border-radius:50px;
+
+text-decoration:none;
+
+margin-top:20px;
+
+box-shadow:
+0 0 20px rgba(212,175,55,.7);
+
+transition:.3s;
+}
+
+.gold-btn:hover{
+transform:translateY(-5px);
+box-shadow:
+0 0 40px rgba(212,175,55,1);
+}
+
+/* LENTERA */
+
+.lantern{
+position:absolute;
+top:50px;
+width:120px;
+animation:float 4s ease-in-out infinite;
+}
+
+.lantern.left{
+left:30px;
+}
+
+.lantern.right{
+right:30px;
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(20px);
+}
+}
+
+/* MASJID */
+
+.mosque{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+opacity:.15;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.title{
+font-size:55px;
+}
+
+.photo-frame{
+width:260px;
+height:360px;
+}
+
+.child-name{
+font-size:35px;
+}
+
+.arab{
+font-size:40px;
+}
+
+.line{
+width:200px;
+}
+
+}
+.luxury-section{
+padding:100px 20px;
+position:relative;
+z-index:10;
+}
+
+.section-header{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-header h2{
+font-size:50px;
+font-family:Cinzel;
+color:#d4af37;
+}
+
+.gold-divider{
+width:200px;
+height:2px;
+background:#d4af37;
+margin:20px auto;
+}
+
+.countdown-grid{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.count-box{
+width:180px;
+padding:35px;
+background:rgba(10,20,40,.7);
+backdrop-filter:blur(12px);
+border:1px solid #d4af37;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 20px rgba(212,175,55,.3);
+}
+
+.count-box span{
+font-size:65px;
+font-weight:700;
+color:#d4af37;
+display:block;
+}
+
+.event-card{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.event-item{
+padding:40px;
+text-align:center;
+background:rgba(10,20,40,.7);
+border:1px solid #d4af37;
+border-radius:25px;
+}
+
+.icon-circle{
+width:80px;
+height:80px;
+border-radius:50%;
+background:#d4af37;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:35px;
+margin:auto;
+margin-bottom:20px;
+}
+
+.location-card{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+}
+
+.location-text,
+.location-map{
+background:rgba(10,20,40,.7);
+padding:30px;
+border:1px solid #d4af37;
+border-radius:25px;
+}
+
+.location-map iframe{
+width:100%;
+height:350px;
+border:none;
+border-radius:15px;
+}
+
+.center{
+text-align:center;
+margin-top:30px;
+}
+
+.closing-card{
+max-width:900px;
+margin:auto;
+text-align:center;
+padding:40px;
+border:1px solid #d4af37;
+border-radius:25px;
+background:rgba(10,20,40,.7);
+}
+
+.action-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+max-width:1200px;
+margin:auto;
+}
+
+.action-btn{
+padding:20px;
+text-align:center;
+border:1px solid #d4af37;
+background:rgba(10,20,40,.7);
+color:#fff;
+text-decoration:none;
+border-radius:20px;
+cursor:pointer;
+transition:.4s;
+}
+
+.action-btn:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px #d4af37;
+}
+#loader{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#030712;
+z-index:99999;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+
+.loader-circle{
+width:120px;
+height:120px;
+border:5px solid rgba(212,175,55,.2);
+border-top:5px solid #d4af37;
+border-radius:50%;
+animation:spin 1.2s linear infinite;
+}
+
+.loader-text{
+margin-top:20px;
+font-size:22px;
+color:#d4af37;
+letter-spacing:5px;
+}
+
+@keyframes spin{
+100%{
+transform:rotate(360deg);
+}
+}
+</style>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="fog"></div>
+   
+
+<div class="stars" id="stars"></div>
+
+<!-- ORNAMEN -->
+ <div class="lantern-svg left">
+
+🕌
+
+</div>
+
+<div class="lantern-svg right">
+
+🕌
+
+</div>
+
+<!-- ORNAMEN KIRI ATAS -->
+
+<svg class="svg-corner top-left"
+viewBox="0 0 300 300">
+
+<path
+d="M0,150
+Q150,0
+300,150
+Q150,50
+0,150Z"
+
+fill="none"
+stroke="#d4af37"
+stroke-width="3"/>
+
+<circle
+cx="150"
+cy="150"
+r="20"
+fill="#d4af37"/>
+
+</svg>
+
+<!-- ORNAMEN KANAN ATAS -->
+
+<svg class="svg-corner top-right"
+viewBox="0 0 300 300">
+
+<path
+d="M0,150
+Q150,0
+300,150
+Q150,50
+0,150Z"
+
+fill="none"
+stroke="#d4af37"
+stroke-width="3"/>
+
+<circle
+cx="150"
+cy="150"
+r="20"
+fill="#d4af37"/>
+
+</svg>
+
+<!-- ORNAMEN KIRI BAWAH -->
+
+<svg class="svg-corner bottom-left"
+viewBox="0 0 300 300">
+
+<path
+d="M0,150
+Q150,0
+300,150
+Q150,50
+0,150Z"
+
+fill="none"
+stroke="#d4af37"
+stroke-width="3"/>
+
+<circle
+cx="150"
+cy="150"
+r="20"
+fill="#d4af37"/>
+
+</svg>
+
+<!-- ORNAMEN KANAN BAWAH -->
+
+<svg class="svg-corner bottom-right"
+viewBox="0 0 300 300">
+
+<path
+d="M0,150
+Q150,0
+300,150
+Q150,50
+0,150Z"
+
+fill="none"
+stroke="#d4af37"
+stroke-width="3"/>
+
+<circle
+cx="150"
+cy="150"
+r="20"
+fill="#d4af37"/>
+
+</svg>
+
+<section class="hero">
+
+<div class="container">
+
+<div class="arab">
+﷽
+</div>
+
+<div class="subtitle">
+TASYAKURAN
+</div>
+
+<div class="title">
+KHITAN
+</div>
+
+<div class="line"></div>
+
+<div class="photo-frame">
+
+<img src="anak.jpg">
+
+</div>
+
+<h1 class="child-name">
+Muhamad Fathan Alfarizy
+</h1>
+
+<div class="parents">
+Putra dari Bapak Ahmad Gozali & Ibu Soleha
+</div>
+
+<div class="quote">
+Semoga menjadi anak yang sholeh,
+berbakti kepada orang tua,
+berguna bagi agama,
+bangsa dan negara.
+</div>
+
+<a href="#countdown" class="gold-btn">
+Buka Undangan
+</a>
+
+</div>
+
+</section>
+
+
+<img src="mosque.png" class="mosque">
+
+<!-- ========================= -->
+<!-- COUNTDOWN PREMIUM -->
+<!-- ========================= -->
+
+<section id="countdown" class="luxury-section">
+
+<div class="section-header">
+<h2>COUNTDOWN ACARA</h2>
+<div class="gold-divider"></div>
+</div>
+
+<div class="countdown-grid">
+
+<div class="count-box">
+<span id="days">0</span>
+<p>Hari</p>
+</div>
+
+<div class="count-box">
+<span id="hours">0</span>
+<p>Jam</p>
+</div>
+
+<div class="count-box">
+<span id="minutes">0</span>
+<p>Menit</p>
+</div>
+
+<div class="count-box">
+<span id="seconds">0</span>
+<p>Detik</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- DETAIL ACARA -->
+<!-- ========================= -->
+
+<section class="luxury-section">
+
+<div class="section-header">
+<h2>DETAIL ACARA</h2>
+<div class="gold-divider"></div>
+</div>
+
+<div class="event-card">
+
+<div class="event-item">
+
+<div class="icon-circle">
+📅
+</div>
+
+<h3>TANGGAL</h3>
+
+<p>28 Agustus 2027</p>
+
+<p>Sabtu</p>
+
+</div>
+
+<div class="event-item">
+
+<div class="icon-circle">
+🕗
+</div>
+
+<h3>WAKTU</h3>
+
+<p>08:00 WIB</p>
+
+<p>s/d Selesai</p>
+
+</div>
+
+<div class="event-item">
+
+<div class="icon-circle">
+🎉
+</div>
+
+<h3>ACARA</h3>
+
+<p>Tasyakuran Khitan</p>
+
+<p>Makan Bersama</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- LOKASI -->
+<!-- ========================= -->
+
+<section class="luxury-section">
+
+<div class="section-header">
+<h2>LOKASI ACARA</h2>
+<div class="gold-divider"></div>
+</div>
+
+<div class="location-card">
+
+<div class="location-text">
+
+<h3>Konter Fikri Salam</h3>
+
+<p>
+Salam 2 RT 001/RW 002
+</p>
+
+<p>
+Desa Karangjaya
+</p>
+
+<p>
+Kecamatan Pedes
+</p>
+
+<p>
+Kabupaten Karawang
+</p>
+
+</div>
+
+<div class="location-map">
+
+<iframe
+src="https://maps.google.com/maps?q=karangjaya%20pedes%20karawang&t=&z=15&ie=UTF8&iwloc=&output=embed"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+<div class="center">
+
+<a
+href="https://maps.google.com/?q=karangjaya+pedes+karawang"
+target="_blank"
+class="gold-btn">
+
+Lihat Google Maps
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- UCAPAN -->
+<!-- ========================= -->
+
+<section class="luxury-section">
+
+<div class="closing-card">
+
+<p>
+
+Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu atas khitanan putra kami.
+
+</p>
+
+<br>
+
+<p>
+
+Atas kehadiran dan doanya kami ucapkan terima kasih.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- ACTION BUTTON -->
+<!-- ========================= -->
+
+<section class="luxury-section">
+
+<div class="action-grid">
+
+<a
+href="https://wa.me/6285781465737?text=Assalamu'alaikum,%20Saya%20akan%20hadir%20pada%20acara%20khitan%20Muhamad%20Fathan%20Alfarizy"
+class="action-btn">
+
+📱 Konfirmasi Kehadiran
+
+</a>
+
+<a
+href="#"
+class="action-btn">
+
+🎁 Kirim Doa
+
+</a>
+
+<a
+onclick="toggleMusic()"
+class="action-btn">
+
+🎵 Putar Musik
+
+</a>
+
+<a
+onclick="shareInvitation()"
+class="action-btn">
+
+📤 Bagikan
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- AUDIO -->
+<!-- ========================= -->
+
+<audio id="bgMusic" loop>
+
+<source src="background.mp3" type="audio/mpeg">
+
+</audio>
+<script>
+
+var targetDate =
+new Date("Aug 28, 2027 08:00:00").getTime();
+
+setInterval(function(){
+
+var now = new Date().getTime();
+
+var distance = targetDate - now;
+
+document.getElementById("days").innerHTML =
+Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML =
+Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML =
+Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML =
+Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+function toggleMusic(){
+
+let music =
+document.getElementById("bgMusic");
+
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+
+}
+
+function shareInvitation(){
+
+if(navigator.share){
+
+navigator.share({
+title:'Khitanan Muhamad Fathan Alfarizy',
+text:'Undangan Khitan',
+url:window.location.href
+});
+
+}
+
+}
+
+</script>
+<script>
+
+/* PARTIKEL EMAS */
+
+for(let i=0;i<120;i++){
+
+let star=document.createElement('div');
+
+star.classList.add('star');
+
+let size=Math.random()*4+1;
+
+star.style.width=size+'px';
+star.style.height=size+'px';
+
+star.style.left=Math.random()*100+'%';
+star.style.top=Math.random()*100+'%';
+
+star.style.animationDelay=
+Math.random()*3+'s';
+
+document.getElementById('stars')
+.appendChild(star);
+
+}
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader")
+.style.display="none";
+
+},2500);
+
+});
+</script>
+
+<footer class="luxury-footer">
+
+<h2>
+Terima Kasih
+</h2>
+
+<p>
+Atas Kehadiran dan Doa Restunya
+</p>
+
+<div class="footer-line"></div>
+
+<p>
+Muhamad Fathan Alfarizy
+</p>
+
+</footer>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+duration:1500,
+once:true
+});
+</script>
+</body>
+</html>
